@@ -107,7 +107,46 @@ button {
 }
 
 .page-hero {
+  position: relative;
   padding-top: 3.5rem;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.shop-hero-slider-shell {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: calc(var(--radius-xl) + 8px);
+  box-shadow: var(--shadow);
+  min-height: 420px;
+}
+
+.shop-hero-slider-shell .hero-slider {
+  min-height: 420px;
+}
+
+.shop-hero-slider-shell .hero-slide {
+  background: transparent;
+}
+
+.shop-hero-slider-shell .hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(248, 240, 216, 0.72), rgba(248, 240, 216, 0.12) 30%, rgba(36, 23, 29, 0.42));
+}
+
+.shop-hero-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding-top: 2rem;
+}
+
+.shop-hero-heading p {
+  color: rgba(61, 55, 80, 0.86);
 }
 
 .page-title {
