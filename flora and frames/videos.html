@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora and Frames - Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo" onclick="goHome()">
+        <img src="logo.jpg" alt="Flora and Frames" class="logo-img" />
+        <div>
+          <span class="brand-tag">Short videos and reels</span>
+          <h2>Flora and Frames</h2>
+        </div>
+      </div>
+      <div class="nav-actions" aria-label="Quick actions">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Search"
+          onclick="goShop()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16.2 16.2L21 21"></path>
+          </svg>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Bag"
+          onclick="goCart()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.5h10l-1 10H8z"></path>
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button ghost" onclick="goHome()">Home</button>
+        <button class="nav-button ghost" onclick="goShop()">Shop</button>
+        <button
+          class="nav-button ghost"
+          data-nav="product"
+          onclick="goProduct()"
+        >
+          Product
+        </button>
+        <button class="nav-button ghost" onclick="goCustomize()">
+          Customize
+        </button>
+        <button class="nav-button" onclick="goStory()">Our Story</button>
+      </div>
+    </nav>
+
+    <div class="shipping-banner">
+      <div class="announcement-slider" id="announcement-slider">
+        <p class="announcement-item is-active">
+          Watch 10 quick decor videos and room styling clips
+        </p>
+        <p class="announcement-item">
+          Free shipping on orders above &#8377;1199/-
+        </p>
+        <p class="announcement-item">Tap any video to watch it with controls</p>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Video gallery</span>
+          <h1 class="page-title">10 short videos to keep visitors exploring</h1>
+          <p>
+            Autoplaying previews with full controls on tap so users can stop and
+            watch if they are interested.
+          </p>
+        </div>
+      </section>
+
+      <section class="video-gallery section-shell">
+        <div class="video-grid">
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel1.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 1 - Cozy room glow-up (reel1)</h3>
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel2.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 2 - Poster wall styling (reel2)</h3>
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel3.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 3 - Lights and vines setup (reel3)</h3>
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel4.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 4 - Gift hamper reveal (reel4)</h3>
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel5.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 5 - Soft girl setup (reel5)</h3>
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel6.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 6 - Full room transformation (reel6)</h3>
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel7.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 7 - Cozy styling moment (reel7)</h3>
+            </article>
+          
+          </article>
+          <article class="video-gallery-card" data-animate>
+            <video controls muted loop playsinline preload="metadata">
+              <source src="Videos/reel8.mp4" type="video/mp4" />
+            </video>
+            <h3>Video 8 - Decor reel preview (reel8)</h3>
+          </article>
+          
+            
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>Flora and Frames</h3>
+        <p>
+          Short videos, room reels, and quick decor inspiration for curious
+          shoppers.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Product</a>
+        <a href="cart.html">Cart</a>
+        <a href="customize.html">Customize</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

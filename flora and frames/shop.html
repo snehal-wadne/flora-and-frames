@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora and Frames - Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo" onclick="goHome()">
+        <img src="logo.jpg" alt="Flora and Frames" class="logo-img" />
+        <div>
+          <span class="brand-tag">Decor collection</span>
+          <h2>Flora and Frames</h2>
+        </div>
+      </div>
+      <div class="nav-actions" aria-label="Quick actions">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Search"
+          onclick="goShop()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16.2 16.2L21 21"></path>
+          </svg>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Bag"
+          onclick="goCart()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.5h10l-1 10H8z"></path>
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button ghost" onclick="goHome()">Home</button>
+        <button
+          class="nav-button ghost"
+          data-nav="product"
+          onclick="goProduct()"
+        >
+          Product
+        </button>
+        <button class="nav-button ghost" onclick="goVideos()">Videos</button>
+        <button class="nav-button ghost" onclick="goCustomize()">
+          Customize
+        </button>
+        <button class="nav-button" onclick="goStory()">Our Story</button>
+      </div>
+    </nav>
+
+    <div class="shipping-banner">
+      <div class="announcement-slider" id="announcement-slider">
+        <p class="announcement-item is-active">
+          Free shipping on orders above &#8377;1199/-
+        </p>
+        <p class="announcement-item">
+          Shop all 8 decor categories in one place
+        </p>
+        <p class="announcement-item">
+          Gifting, decor kits, and custom add-ons available
+        </p>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Shop all categories</span>
+          <h1 class="page-title">
+            Find the pieces for your perfect room setup
+          </h1>
+          <p>
+            All 8 categories are here, laid out clearly so shoppers can browse
+            without homepage clutter.
+          </p>
+        </div>
+      </section>
+
+      <section class="categories-section section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Browse categories</span>
+          <h2>Shop by Category</h2>
+          <p>
+            Choose a category and build your room aesthetic one layer at a time.
+          </p>
+        </div>
+        <div class="category-grid">
+          <!-- Wall Posters -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/wall_poster.jpeg"
+                  src="img/shop_images/wall_poster1.jpeg"
+                  alt="Wall Posters"
+                  class="category-image"
+                  data-category="wall-posters"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+              </div>
+            </div>
+            <h3>Wall Posters</h3>
+            <p>Create bold gallery walls with dreamy editorial energy.</p>
+          </div>
+
+          <!-- Lights -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/ligts.jpeg"
+                  alt="Lights"
+                  class="category-image"
+                  data-category="lights"
+                  data-index="0"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3>Lights</h3>
+            <p>Warm layers that instantly change the atmosphere.</p>
+          </div>
+
+          <!-- Fake Vines -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/fake_vines.jpeg"
+                  alt="Fake Vines"
+                  class="category-image"
+                  data-category="fake-vines"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+              </div>
+            </div>
+            <h3>Fake Vines</h3>
+            <p>Add softness and movement to shelves, walls, and mirrors.</p>
+          </div>
+
+          <!-- Decor Kits -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/decor_kits.jpeg"
+                  alt="Decor Kits"
+                  class="category-image"
+                  data-category="decor-kits"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+              </div>
+            </div>
+            <h3>Decor Kits</h3>
+            <p>Ready-made kits to quickly style every room.</p>
+          </div>
+
+          <!-- Gifting -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/gifting.jpeg"
+                  alt="Gifting"
+                  class="category-image"
+                  data-category="gifting"
+                  data-index="0"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3>Gifting</h3>
+            <p>The perfect thoughtful gift sets for any celebration.</p>
+          </div>
+
+          <!-- Photo Frames -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/photoframe.jpeg"
+                  alt="Photo Frames"
+                  class="category-image"
+                  data-category="photo-frames"
+                  data-index="0"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3>Photo Frames</h3>
+            <p>Frame memories in style with sleek and vintage frame options.</p>
+          </div>
+
+          <!-- Wall Decor -->
+          <div class="category-card">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img
+                  src="img/shop_images/wall_decor.jpeg"
+                  alt="Wall Decor"
+                  class="category-image"
+                  data-category="wall-decor"
+                />
+              </div>
+              <div class="dots-container">
+                <span class="dot active"></span>
+              </div>
+            </div>
+            <h3>Wall Decor</h3>
+            <p>
+              Transform your walls with curated decor pieces and accessories.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>Flora and Frames</h3>
+        <p>
+          Browse curated categories and build your room one layer at a time.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="videos.html">Videos</a>
+        <a href="customize.html">Customize</a>
+        <a href="cart.html">Cart</a>
+        <a href="story.html">Our Story</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

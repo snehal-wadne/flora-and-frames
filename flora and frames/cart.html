@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora and Frames - Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo" onclick="goHome()">
+        <img src="logo.jpg" alt="Flora and Frames" class="logo-img" />
+        <div>
+          <span class="brand-tag">Cart and checkout</span>
+          <h2>Flora and Frames</h2>
+        </div>
+      </div>
+      <div class="nav-actions" aria-label="Quick actions">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Search"
+          onclick="goShop()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16.2 16.2L21 21"></path>
+          </svg>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Bag"
+          onclick="goCart()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.5h10l-1 10H8z"></path>
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button ghost" onclick="goHome()">Home</button>
+        <button class="nav-button ghost" onclick="goShop()">Shop</button>
+        <button
+          class="nav-button ghost"
+          data-nav="product"
+          onclick="goProduct()"
+        >
+          Product
+        </button>
+        <button class="nav-button ghost" onclick="goVideos()">Videos</button>
+        <button class="nav-button ghost" onclick="goCustomize()">
+          Customize
+        </button>
+        <button class="nav-button" onclick="goStory()">Our Story</button>
+      </div>
+    </nav>
+
+    <div class="shipping-banner">
+      <div class="announcement-slider" id="announcement-slider">
+        <p class="announcement-item is-active">
+          Review your order, add your details, and send it directly on WhatsApp
+        </p>
+        <p class="announcement-item">
+          Free shipping on orders above &#8377;1199/-
+        </p>
+        <p class="announcement-item">
+          Fast manual ordering flow for easier checkout
+        </p>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Your cart</span>
+          <h1 class="page-title">Checkout with WhatsApp</h1>
+          <p>
+            Add your name, phone number, and address, then send the full order
+            directly to WhatsApp.
+          </p>
+        </div>
+      </section>
+
+      <section class="cart-section section-shell">
+        <div class="cart-grid">
+          <div class="cart-list-card" data-animate>
+            <div class="cart-header-row">
+              <h2>Order Items</h2>
+              <button class="text-link" type="button" onclick="clearCart()">
+                Clear cart
+              </button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-total-row">
+              <span>Total</span>
+              <strong id="cart-total">&#8377;0.00</strong>
+            </div>
+          </div>
+
+          <div class="checkout-card" data-animate>
+            <h2>Customer Details</h2>
+            <form id="checkout-form" class="checkout-form">
+              <label>
+                <span>Name</span>
+                <input
+                  type="text"
+                  id="customer-name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </label>
+              <label>
+                <span>Phone Number</span>
+                <input
+                  type="tel"
+                  id="customer-phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </label>
+              <label>
+                <span>PIN Code</span>
+                <input
+                  type="text"
+                  id="customer-pincode"
+                  name="pincode"
+                  inputmode="numeric"
+                  maxlength="6"
+                  placeholder="Enter 6-digit PIN code"
+                  required
+                />
+              </label>
+              <label>
+                <span>Village / Post Office</span>
+                <select id="customer-village" name="village" required>
+                  <option value="">Select village / post office</option>
+                </select>
+              </label>
+              <div class="checkout-inline-grid">
+                <label>
+                  <span>District</span>
+                  <input
+                    type="text"
+                    id="customer-district"
+                    name="district"
+                    placeholder="District"
+                    readonly
+                    required
+                  />
+                </label>
+                <label>
+                  <span>State</span>
+                  <input
+                    type="text"
+                    id="customer-state"
+                    name="state"
+                    placeholder="State"
+                    readonly
+                    required
+                  />
+                </label>
+              </div>
+              <label>
+                <span>House / Street / Landmark</span>
+                <textarea
+                  id="customer-address"
+                  name="address"
+                  rows="4"
+                  placeholder="Enter house number, street, landmark"
+                  required
+                ></textarea>
+              </label>
+              <label>
+                <span>Extra Notes</span>
+                <textarea
+                  id="customer-notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Optional notes for your order"
+                ></textarea>
+              </label>
+              <button class="shop-now-btn checkout-submit" type="submit">
+                Send Order on WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>Flora and Frames</h3>
+        <p>Simple checkout flow for quick WhatsApp-based ordering.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Product</a>
+        <a href="customize.html">Customize</a>
+        <a href="story.html">Our Story</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

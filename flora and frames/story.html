@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora and Frames - Our Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo" onclick="goHome()">
+        <img src="logo.jpg" alt="Flora and Frames" class="logo-img" />
+        <div>
+          <span class="brand-tag">Behind the brand</span>
+          <h2>Flora and Frames</h2>
+        </div>
+      </div>
+      <div class="nav-actions" aria-label="Quick actions">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Search"
+          onclick="goShop()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16.2 16.2L21 21"></path>
+          </svg>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Bag"
+          onclick="goCart()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.5h10l-1 10H8z"></path>
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button ghost" onclick="goHome()">Home</button>
+        <button class="nav-button ghost" onclick="goShop()">Shop</button>
+        <button
+          class="nav-button ghost"
+          data-nav="product"
+          onclick="goProduct()"
+        >
+          Product
+        </button>
+        <button class="nav-button ghost" onclick="goVideos()">Videos</button>
+        <button class="nav-button" onclick="goCustomize()">Customize</button>
+      </div>
+    </nav>
+
+    <div class="shipping-banner">
+      <div class="announcement-slider" id="announcement-slider">
+        <p class="announcement-item is-active">
+          Free shipping on orders above &#8377;1199/-
+        </p>
+        <p class="announcement-item">
+          Built for cozy corners, gifting, and aesthetic rooms
+        </p>
+        <p class="announcement-item">
+          Flora and Frames was made to bring Pinterest decor to life
+        </p>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Our Story</span>
+          <h1 class="page-title">
+            A brand built from cozy corners, soft visuals, and personal spaces
+          </h1>
+          <p>
+            Flora and Frames began with the idea that room decor should feel
+            curated, expressive, and easy to style.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-section section-shell">
+        <div class="story-grid">
+          <div class="story-copy" data-animate>
+            <span class="eyebrow">Why we started</span>
+            <h2>
+              We wanted to make Pinterest-style room decor easier to bring into
+              real life.
+            </h2>
+            <p>
+              Too often, room inspiration looks beautiful online but feels
+              difficult to recreate. Flora and Frames was created to bridge that
+              gap with decor pieces that actually work together.
+            </p>
+            <p>
+              From wall posters and fairy lights to vines, frames, and custom
+              decor, our goal is to help people style spaces that feel personal,
+              pretty, and realistic for everyday living.
+            </p>
+          </div>
+          <div class="story-card" data-animate>
+            <img
+              src="https://source.unsplash.com/1200x900/?small,business,decor,studio"
+              alt="Our Story room aesthetic"
+            />
+            <div class="story-card-copy">
+              <strong>Designed for everyday room glow-ups</strong>
+              <p>
+                We make decor that feels beautiful on camera and comforting in
+                real life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>Flora and Frames</h3>
+        <p>Thoughtful decor for expressive rooms and cozy everyday corners.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Product</a>
+        <a href="videos.html">Videos</a>
+        <a href="cart.html">Cart</a>
+        <a href="customize.html">Customize</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

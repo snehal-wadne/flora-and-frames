@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora and Frames - Customize</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="customize-page">
+    <nav class="navbar">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo" onclick="goHome()">
+        <img src="logo.jpg" alt="Flora and Frames" class="logo-img" />
+        <div>
+          <span class="brand-tag">Personalized decor</span>
+          <h2>Flora and Frames</h2>
+        </div>
+      </div>
+      <div class="nav-actions" aria-label="Quick actions">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Search"
+          onclick="goShop()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16.2 16.2L21 21"></path>
+          </svg>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Bag"
+          onclick="goCart()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.5h10l-1 10H8z"></path>
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button ghost" onclick="goHome()">Home</button>
+        <button class="nav-button ghost" onclick="goShop()">Shop</button>
+        <button
+          class="nav-button ghost"
+          data-nav="product"
+          onclick="goProduct()"
+        >
+          Product
+        </button>
+        <button class="nav-button ghost" onclick="goVideos()">Videos</button>
+        <button class="nav-button" onclick="goStory()">Our Story</button>
+      </div>
+    </nav>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Customize your decor</span>
+          <h1 class="page-title">
+            Design a custom decor setup that feels made for your space
+          </h1>
+          <p>
+            Pick the vibe, share your ideas, and start a custom order flow that
+            feels clear, premium, and easy to follow.
+          </p>
+          <div class="customize-hero-meta">
+            <span>Posters</span>
+            <span>Photo Walls</span>
+            <span>Frames</span>
+            <span>Gift Customization</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="customize-section section-shell">
+        <div class="customize-grid">
+          <div class="customize-copy" data-animate>
+            <span class="eyebrow">Make it personal</span>
+            <h2>Customize your decor aesthetic</h2>
+            <p>
+              Perfect for customers who want names, quotes, color matching, or a
+              room setup that feels more unique than ready-made decor alone.
+            </p>
+
+            <div class="customize-controls">
+              <button class="custom-chip is-active" data-theme="soft">
+                Soft Bloom
+              </button>
+              <button class="custom-chip" data-theme="cozy">Cozy Glow</button>
+              <button class="custom-chip" data-theme="fresh">
+                Fresh Green
+              </button>
+            </div>
+
+            <div class="customize-features">
+              <div class="feature-line">
+                <strong>Personalized Designs</strong>
+                <span>Names, quotes, photo walls, and custom notes.</span>
+              </div>
+              <div class="feature-line">
+                <strong>Color Matching</strong>
+                <span>Choose tones that fit your exact room palette.</span>
+              </div>
+              <div class="feature-line">
+                <strong>Flexible Sizing</strong>
+                <span
+                  >Made to fit compact desks, corners, or statement walls.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="preview-card theme-soft" id="preview-card" data-animate>
+            <div class="preview-top">
+              <span class="preview-pill">Live vibe preview</span>
+              <strong id="preview-title">Soft Bloom</strong>
+            </div>
+            <div class="preview-stage">
+              <div class="preview-orb"></div>
+              <img
+                src="https://source.unsplash.com/1200x900/?custom,desk,decor"
+                alt="Customized decor preview"
+              />
+            </div>
+            <div class="preview-notes">
+              <p id="preview-copy">
+                Blush tones, airy layers, and a personalized romantic finish.
+              </p>
+              <div class="preview-tags">
+                <span id="preview-tag-1">Blush tones</span>
+                <span id="preview-tag-2">Soft wall art</span>
+                <span id="preview-tag-3">Dreamy lighting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="custom-request-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Start custom order</span>
+          <h2>Send your customization request</h2>
+          <p>
+            Fill in the order details here, then WhatsApp will open with your
+            request. After that, attach your photos directly in the chat.
+          </p>
+        </div>
+
+        <div class="custom-request-card" data-animate>
+          <div class="custom-request-grid">
+            <label class="custom-field">
+              <span>Name</span>
+              <input
+                id="custom-order-name"
+                type="text"
+                placeholder="Your name"
+              />
+            </label>
+            <label class="custom-field">
+              <span>Phone</span>
+              <input
+                id="custom-order-phone"
+                type="tel"
+                placeholder="Your phone number"
+              />
+            </label>
+            <label class="custom-field">
+              <span>Product Type</span>
+              <select id="custom-order-product">
+                <option value="Wall Poster">Wall Poster</option>
+                <option value="Photo Frame">Photo Frame</option>
+                <option value="Photo Wall Setup">Photo Wall Setup</option>
+                <option value="Custom Gift Decor">Custom Gift Decor</option>
+              </select>
+            </label>
+            <label class="custom-field">
+              <span>Size</span>
+              <select id="custom-order-size">
+                <option value="A4">A4</option>
+                <option value="A5">A5</option>
+                <option value="A3">A3</option>
+                <option value='13x19"'>13x19"</option>
+                <option value="Custom Size">Custom Size</option>
+              </select>
+            </label>
+            <label class="custom-field">
+              <span>Quantity</span>
+              <input
+                id="custom-order-quantity"
+                type="number"
+                min="1"
+                value="1"
+              />
+            </label>
+            <label class="custom-field custom-field-full">
+              <span>Notes</span>
+              <textarea
+                id="custom-order-notes"
+                rows="4"
+                placeholder="Add names, quotes, colors, theme, or any special instructions"
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="custom-request-note">
+            <strong>How photo upload works</strong>
+            <p>
+              After you click the button below, WhatsApp will open with your
+              order details. Then simply attach your photos manually in that
+              chat.
+            </p>
+          </div>
+
+          <div class="custom-request-actions">
+            <button class="nav-button" type="button" id="custom-order-whatsapp">
+              Continue to WhatsApp
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>Flora and Frames</h3>
+        <p>
+          Custom decor made to feel more personal, thoughtful, and
+          room-specific.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Product</a>
+        <a href="videos.html">Videos</a>
+        <a href="cart.html">Cart</a>
+        <a href="story.html">Our Story</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

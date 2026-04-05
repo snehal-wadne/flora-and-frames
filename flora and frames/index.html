@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora and Frames - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-one"></div>
+    <div class="page-glow page-glow-two"></div>
+
+    <nav class="navbar">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo" onclick="goHome()">
+        <img src="logo.jpg" alt="Flora and Frames" class="logo-img" />
+        <div>
+          <span class="brand-tag">Aesthetic gifting and room decor</span>
+          <h2>Flora and Frames</h2>
+        </div>
+      </div>
+      <div class="nav-actions" aria-label="Quick actions">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Search"
+          onclick="goShop()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16.2 16.2L21 21"></path>
+          </svg>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Bag"
+          onclick="goCart()"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.5h10l-1 10H8z"></path>
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button ghost" onclick="goShop()">Shop</button>
+        <button
+          class="nav-button ghost"
+          data-nav="product"
+          onclick="goProduct()"
+        >
+          Product
+        </button>
+        <button class="nav-button ghost" onclick="goVideos()">Videos</button>
+        <button class="nav-button ghost" onclick="goCustomize()">
+          Customize
+        </button>
+        <button class="nav-button" onclick="goStory()">Our Story</button>
+      </div>
+    </nav>
+
+    <div class="shipping-banner">
+      <div class="announcement-slider" id="announcement-slider">
+        <p class="announcement-item is-active">
+          Free shipping on orders above &#8377;1199/-
+        </p>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <section class="store-hero section-shell" data-animate>
+        <div class="hero-slider-shell">
+          <div class="hero-slider" id="hero-slider">
+            <article class="hero-slide is-active">
+              <img
+                src="img/hero/hero-photo-1.jpg"
+                alt="Pinterest perfect room decor setup"
+              />
+              <div class="hero-slide-copy">
+                <span class="eyebrow">New drop</span>
+                <h1>Pinterest perfect room in a box</h1>
+                <p>
+                  Curated decor pieces and bundles that make your room feel
+                  styled instantly.
+                </p>
+                <div class="hero-actions">
+                  <button class="shop-now-btn" onclick="goShop()">
+                    Shop Now
+                  </button>
+                  <button class="hero-link" onclick="goCustomize()">
+                    Customize Yours
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="hero-slide">
+              <img
+                src="img/hero/hero-photo-2.jpg"
+                alt="Cozy room inspiration"
+              />
+              <div class="hero-slide-copy">
+                <span class="eyebrow">Real room edit</span>
+                <h2>Build a soft, glowing room aesthetic</h2>
+                <p>
+                  Mix posters, lights, and vines for a setup that looks good in
+                  reels and in real life.
+                </p>
+                <div class="hero-actions">
+                  <button class="shop-now-btn" onclick="goProduct()">
+                    View Real Rooms
+                  </button>
+                  <button class="hero-link" onclick="goShop()">
+                    Browse Decor
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="hero-slide">
+              <img
+                src="img/hero/hero-photo-3.jpg"
+                alt="Customized room decor setup"
+              />
+              <div class="hero-slide-copy">
+                <span class="eyebrow">Made personal</span>
+                <h2>Custom decor for gifts, corners, and wall stories</h2>
+                <p>
+                  Add names, quotes, colors, and sizing that actually fit your
+                  room or gifting idea.
+                </p>
+                <div class="hero-actions">
+                  <button class="shop-now-btn" onclick="goCustomize()">
+                    Start Customizing
+                  </button>
+                  <button class="hero-link" onclick="goStory()">
+                    Our Story
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="hero-slider-dots" id="hero-slider-dots"></div>
+        </div>
+      </section>
+
+      <section class="categories-section section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Must-have pieces</span>
+          <h2>Pinterest favorites</h2>
+          <p>
+            Trending decor picks your customers can browse quickly and shop
+            instantly.
+          </p>
+        </div>
+        <div class="featured-product-showcase" data-animate>
+          <div class="featured-product-main">
+            <div class="featured-product-gallery">
+              <img
+                src="img/favorite/favorite-main.jpg"
+                alt="Pinterest favorite wall poster setup"
+              />
+              <img
+                src="img/favorite/favorite-1.jpg"
+                alt="Pinterest favorite wall poster collage"
+              />
+              <img
+                src="img/favorite/favorite-3.jpg"
+                alt="Pinterest favorite photo frame layout"
+              />
+              <img
+                src="img/favorite/favorite-4.jpg"
+                alt="Pinterest favorite vine decor styling"
+              />
+            </div>
+            <div class="featured-product-copy">
+              <span class="eyebrow">Featured favorite</span>
+              <h3>Signature Pinterest Picks</h3>
+              <p>
+                Our most-loved room decor combinations for instant wall styling,
+                cozy corners, and aesthetic setups.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="customize-section section-shell">
+        <div class="section-heading" data-animate>
+          <span class="eyebrow">Make it personal</span>
+          <h2>Customize Your Decor</h2>
+          <p>
+            Upload your photos, pick a poster size, and create a wall setup that
+            feels personal to your room.
+          </p>
+        </div>
+        <div class="customize-grid">
+          <div class="customize-product-card" data-animate>
+            <div class="customize-slider" id="customize-slider">
+              <div class="customize-slider-track">
+                <div class="customize-slide is-active">
+                  <img
+                    src="img/favorite/favorite-main.jpg"
+                    alt="Customized decor preview one"
+                  />
+                </div>
+                <div class="customize-slide">
+                  <img
+                    src="img/favorite/favorite-1.jpg"
+                    alt="Customized decor preview two"
+                  />
+                </div>
+                <div class="customize-slide">
+                  <img
+                    src="img/favorite/favorite-3.jpg"
+                    alt="Customized decor preview three"
+                  />
+                </div>
+                <div class="customize-slide">
+                  <img
+                    src="img/favorite/favorite-4.jpg"
+                    alt="Customized decor preview four"
+                  />
+                </div>
+                <div class="customize-slide">
+                  <img
+                    src="img/favorite/favorite-2.jpg"
+                    alt="Customized decor preview five"
+                  />
+                </div>
+              </div>
+              <button
+                class="customize-slider-btn customize-slider-prev"
+                type="button"
+                aria-label="Previous customize preview"
+              >
+                &#10094;
+              </button>
+              <button
+                class="customize-slider-btn customize-slider-next"
+                type="button"
+                aria-label="Next customize preview"
+              >
+                &#10095;
+              </button>
+            </div>
+            <div class="customize-mini-gallery">
+              <img
+                src="img/favorite/favorite-main.jpg"
+                alt="Customize gallery thumbnail one"
+              />
+              <img
+                src="img/favorite/favorite-1.jpg"
+                alt="Customize gallery thumbnail two"
+              />
+              <img
+                src="img/favorite/favorite-3.jpg"
+                alt="Customize gallery thumbnail three"
+              />
+            </div>
+            <div class="customize-card-link-row">
+              <button
+                class="customize-inline-link"
+                type="button"
+                onclick="goCustomize()"
+              >
+                View more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lights-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Ambient lighting</span>
+          <h2>Lights Collection</h2>
+          <p>
+            Beautiful lighting solutions to create the perfect ambiance in your
+            space.
+          </p>
+        </div>
+        <div class="product-strip">
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/product_images/lights/lights.jpg"
+              alt="Fairy Lights"
+            />
+            <h3>Fairy Lights</h3>
+            <p>&#8377;299.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Fairy Lights"
+              data-product-price="299"
+              data-product-image="img/product_images/lights/lights.jpg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/product_images/lights/lights1.jpg"
+              alt="LED String Lights"
+            />
+            <h3>LED String Lights</h3>
+            <p>&#8377;399.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="LED String Lights"
+              data-product-price="399"
+              data-product-image="img/product_images/lights/lights1.jpg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/product_images/lights/lights2.jpg"
+              alt="Color Lights"
+            />
+            <h3>Color Lights</h3>
+            <p>&#8377;499.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Color Lights"
+              data-product-price="499"
+              data-product-image="img/product_images/lights/lights2.jpg"
+            >
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="wall-decor-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Wall styling</span>
+          <h2>Wall Decor Collection</h2>
+          <p>
+            Transform your walls with our curated selection of decor pieces and
+            accessories.
+          </p>
+        </div>
+        <div class="product-strip">
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/wall_decor.jpeg"
+              alt="Minimal Wall Decor"
+            />
+            <h3>Minimal Wall Decor</h3>
+            <p>&#8377;999.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Minimal Wall Decor"
+              data-product-price="999"
+              data-product-image="img/shop_images/wall_decor.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/wall_decor1.jpeg"
+              alt="Macrame Wall Decor"
+            />
+            <h3>Macrame Wall Decor</h3>
+            <p>&#8377;1,199.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Macrame Wall Decor"
+              data-product-price="1199"
+              data-product-image="img/shop_images/wall_decor1.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="wall-posters-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Poster styling</span>
+          <h2>Wall Posters</h2>
+          <p>
+            A collection of curated wall posters for dreamy room and collage
+            styling.
+          </p>
+        </div>
+        <div class="product-strip">
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/wall_poster.jpeg"
+              alt="Neutral Wall Poster"
+            />
+            <h3>Neutral Wall Poster</h3>
+            <p>&#8377;749.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Neutral Wall Poster"
+              data-product-price="749"
+              data-product-image="img/shop_images/wall_poster.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/wall_poster1.jpeg"
+              alt="Vintage Wall Poster"
+            />
+            <h3>Vintage Wall Poster</h3>
+            <p>&#8377;699.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Vintage Wall Poster"
+              data-product-price="699"
+              data-product-image="img/shop_images/wall_poster1.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/wall_poster2.jpeg"
+              alt="Botanical Wall Poster"
+            />
+            <h3>Botanical Wall Poster</h3>
+            <p>&#8377;649.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Botanical Wall Poster"
+              data-product-price="649"
+              data-product-image="img/shop_images/wall_poster2.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/wall_poster3.jpeg"
+              alt="Illustrated Wall Poster"
+            />
+            <h3>Illustrated Wall Poster</h3>
+            <p>&#8377;799.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Illustrated Wall Poster"
+              data-product-price="799"
+              data-product-image="img/shop_images/wall_poster3.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="fake-vines-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Botanical accents</span>
+          <h2>Fake Vines</h2>
+          <p>
+            Easy-to-style faux vines for mood lighting, walls, and cozy corners.
+          </p>
+        </div>
+        <div class="product-strip">
+          <article class="product-strip-card" data-animate>
+            <img src="img/shop_images/fake_vines.jpeg" alt="Fake Vines Small" />
+            <h3>Fake Vines Small</h3>
+            <p>&#8377;499.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Fake Vines Small"
+              data-product-price="499"
+              data-product-image="img/shop_images/fake_vines.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/fake_vines1.jpeg"
+              alt="Fake Vines Large"
+            />
+            <h3>Fake Vines Large</h3>
+            <p>&#8377;799.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Fake Vines Large"
+              data-product-price="799"
+              data-product-image="img/shop_images/fake_vines1.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="photo-frames-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Frame your memories</span>
+          <h2>Photo Frames</h2>
+          <p>
+            Sleek frames to showcase your favorite photos on desks, shelves, and
+            gallery walls.
+          </p>
+        </div>
+        <div class="product-strip">
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/photoframe.jpeg"
+              alt="Classic Photo Frame"
+            />
+            <h3>Classic Photo Frame</h3>
+            <p>&#8377;899.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Classic Photo Frame"
+              data-product-price="899"
+              data-product-image="img/shop_images/photoframe.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img
+              src="img/shop_images/photoframe1.jpeg"
+              alt="Minimal Photo Frame"
+            />
+            <h3>Minimal Photo Frame</h3>
+            <p>&#8377;1,099.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Minimal Photo Frame"
+              data-product-price="1099"
+              data-product-image="img/shop_images/photoframe1.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-strip-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Gift-ready picks</span>
+          <h2>Gifting Ideas</h2>
+          <p>
+            Pre-made aesthetic hampers and decor gifts your customers can swipe
+            through quickly.
+          </p>
+        </div>
+        <div class="product-strip">
+          <article class="product-strip-card" data-animate>
+            <img src="img/shop_images/gifting.jpeg" alt="Glow Box Hamper" />
+            <h3>Glow Box Hamper</h3>
+            <p>&#8377;1,349.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Glow Box Hamper"
+              data-product-price="1349"
+              data-product-image="img/shop_images/gifting.jpeg"
+            >
+              Choose options
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img src="img/shop_images/gifting1.jpeg" alt="Noor Gift Hamper" />
+            <h3>Noor Gift Hamper</h3>
+            <p>&#8377;1,099.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Noor Gift Hamper"
+              data-product-price="1099"
+              data-product-image="img/shop_images/gifting1.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+          <article class="product-strip-card" data-animate>
+            <img src="img/shop_images/gifting2.jpeg" alt="Paradise Hamper" />
+            <h3>Paradise Hamper</h3>
+            <p>&#8377;3,599.00</p>
+            <button
+              data-add-to-cart
+              data-product-name="Paradise Hamper"
+              data-product-price="3599"
+              data-product-image="img/shop_images/gifting2.jpeg"
+            >
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="video-strip-section section-shell">
+        <div class="section-heading compact" data-animate>
+          <span class="eyebrow">Short videos</span>
+          <h2>Room reels and decor clips</h2>
+          <p>
+            Autoplaying short videos that visitors can tap if they want to watch
+            more.
+          </p>
+        </div>
+        <div class="video-strip">
+          <article
+            class="video-card"
+            data-animate
+            data-popup-video="Videos/Videos 1.mp4"
+          >
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="Videos/Videos 1.mp4" type="video/mp4" />
+            </video>
+            <div class="video-card-copy">
+              <strong>Custom Video 1</strong>
+              <span>Playing from your local video folder</span>
+            </div>
+          </article>
+          <article
+            class="video-card"
+            data-animate
+            data-popup-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          >
+            <video autoplay muted loop playsinline preload="metadata">
+              <source
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="video-card-copy">
+              <strong>Poster wall styling</strong>
+              <span>Quick decor inspiration</span>
+            </div>
+          </article>
+          <article
+            class="video-card"
+            data-animate
+            data-popup-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+          >
+            <video autoplay muted loop playsinline preload="metadata">
+              <source
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="video-card-copy">
+              <strong>Lights and vines setup</strong>
+              <span>Swipe and watch</span>
+            </div>
+          </article>
+          <article
+            class="video-card"
+            data-animate
+            data-popup-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+          >
+            <video autoplay muted loop playsinline preload="metadata">
+              <source
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="video-card-copy">
+              <strong>Gift hamper reveal</strong>
+              <span>Tap for 10 videos</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section section-shell" data-animate>
+        <div class="cta-card">
+          <div>
+            <span class="eyebrow">Browse smarter</span>
+            <h2>Shop, get inspired, customize, then make it yours.</h2>
+            <p>
+              The site now follows a storefront flow similar to the reference,
+              but with a cleaner multi-page experience.
+            </p>
+          </div>
+          <button class="shop-now-btn" onclick="goShop()">
+            Start Shopping
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h3>Flora and Frames</h3>
+        <p>
+          Curated room decor, personalized details, and Pinterest-inspired
+          setups for modern spaces.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Product</a>
+        <a href="videos.html">Videos</a>
+        <a href="customize.html">Customize</a>
+        <a href="cart.html">Cart</a>
+        <a href="story.html">Our Story</a>
+      </div>
+    </footer>
+
+    <div class="video-popup" id="video-popup" aria-hidden="true">
+      <div class="video-popup-backdrop" data-close-video-popup></div>
+      <div
+        class="video-popup-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Video popup"
+      >
+        <button
+          class="video-popup-close"
+          type="button"
+          aria-label="Close video popup"
+          data-close-video-popup
+        >
+          &times;
+        </button>
+        <video id="video-popup-player" controls playsinline></video>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
